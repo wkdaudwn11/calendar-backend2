@@ -4,6 +4,7 @@
   "description": "calendar backend API server",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "server:dev": "env-cmd -f .env.development nodemon --exec babel-node src/index.js --delay 1",
     "server:prod": "env-cmd -f .env.production nodemon --exec babel-node src/index.js --delay 1",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.2",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
   }
