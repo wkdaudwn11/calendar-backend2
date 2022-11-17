@@ -7,6 +7,7 @@ import cors from 'cors';
 import homeRouter from './routers/home';
 
 const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
@@ -16,6 +17,7 @@ app.use(cors());
 app.use('/home', homeRouter);
 
 const PORT = process.env.PORT || 4000;
+
 const handleListening = () =>
   console.log(`Listening on: http://localhost:${PORT}...`);
 
